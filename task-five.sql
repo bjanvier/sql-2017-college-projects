@@ -1,0 +1,30 @@
+-- USE OF EXCEPT
+SELECT * 
+	FROM 
+		PLAYER 
+	    WHERE Goals BETWEEN 50 AND 50000 
+
+EXCEPT 
+
+SELECT 
+	* 
+	FROM 
+		PLAYER 
+		WHERE age BETWEEN 19 AND 25 
+   		group by Full_name;
+
+SELECT 
+	PLAYER.Full_name 
+FROM 
+	PLAYER 
+
+-- USE OF UNION
+UNION 
+
+SELECT 
+	RETIREES.id_retiree 
+FROM 
+	RETIREES
+    WHERE id_player >= 5
+
+
